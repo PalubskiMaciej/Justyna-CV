@@ -1,4 +1,5 @@
 .popup {
+  animation: fadeIn 0.3s;
   position: fixed;
   left: 0;
   top: 0;
@@ -43,4 +44,13 @@
 
 .popup__arrow--right {
   right: 10%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
