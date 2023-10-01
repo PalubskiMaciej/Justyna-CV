@@ -20,11 +20,19 @@ popupClose.addEventListener("click", () => {
 });
 
 arrowRight.addEventListener("click", () => {
-  currentImgIndex = currentImgIndex + 1;
+  if (currentImgIndex === galleryItems.length - 1) {
+    currentImgIndex = 0;
+  } else {
+    currentImgIndex = currentImgIndex + 1;
+  }
   popupImage.src = galleryItems[currentImgIndex].src;
 });
 
 arrowLeft.addEventListener("click", () => {
-  currentImgIndex = currentImgIndex - 1;
+  if (currentImgIndex === 0) {
+    currentImgIndex = galleryItems.length - 1;
+  } else {
+    currentImgIndex = currentImgIndex - 1;
+  }
   popupImage.src = galleryItems[currentImgIndex].src;
 });
