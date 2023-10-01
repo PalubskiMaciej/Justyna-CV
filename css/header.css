@@ -1,0 +1,24 @@
+.header {
+  text-align: center;
+}
+
+.header__section {
+  display: grid;
+  grid-template-areas: "mn mn as";
+  /* background-color: aqua; */
+  padding: 20px;
+}
+
+.header__image {
+  max-width: 300px;
+  max-height: 600px;
+  grid-area: as;
+}
+
+.header__paragraph {
+  display: grid;
+  grid-area: mn;
+  font-size: 30px;
+  text-align: center;
+  align-content: center;
+}
