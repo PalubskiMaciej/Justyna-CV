@@ -5,7 +5,6 @@
 .header__section {
   display: grid;
   grid-template-areas: "mn mn as";
-  /* background-color: aqua; */
   padding: 20px;
 }
 
@@ -13,6 +12,17 @@
   max-width: 300px;
   max-height: 600px;
   grid-area: as;
+}
+@media (max-width: 767px) {
+  .header__section {
+    grid-template-areas:
+      "as as"
+      "mn mn";
+  }
+
+  .header__image {
+    margin: 0 auto;
+  }
 }
 
 .header__paragraph {
