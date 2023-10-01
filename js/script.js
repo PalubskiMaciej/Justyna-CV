@@ -43,20 +43,24 @@ arrowRight.addEventListener("click", showNextImage);
 
 arrowLeft.addEventListener("click", showPreviousImage);
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", ({ code, keyCode }) => {
   if (!popup.classList.contains("popup__hidden")) {
-    if (event.code === "ArrowRight" || event.keyCode === 39) {
+    if (code === "ArrowRight" || keyCode === 39) {
       showNextImage();
     }
 
-    if (event.code === "ArrowLeft" || event.keyCode === 37) {
+    if (code === "ArrowLeft" || keyCode === 37) {
       showPreviousImage();
     }
 
-    if (event.code === "Escape" || event.keyCode === 27) {
-      galleryClose();
+    if (code === "Escape" || keyCode === 27) {
+      closePopup();
     }
   }
 });
 
-popup.addEventListener("click", closePopup);
+popup.addEventListener("click", ({ target }) => {
+  if (target === popup) {
+    closePopup();
+  }
+});
