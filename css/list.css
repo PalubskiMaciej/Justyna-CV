@@ -1,14 +1,16 @@
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: center;
   list-style-type: none;
   padding-left: 0;
+  justify-items: center;
+  flex-wrap: wrap;
 }
 
 .galleryItem {
-  max-width: 100px;
-  max-height: 150px;
+  flex-basis: 25%;
+  max-height: 350px;
   margin: 20px;
   overflow: hidden;
   transform: scale(1);
@@ -17,7 +19,7 @@
   border: 2px solid rgba(0, 0, 0, 0);
 }
 
-.galleryItem:hover {
+@media (max-width) .galleryItem:hover {
   transform: scale(1.2);
   cursor: pointer;
 }

@@ -1,0 +1,13 @@
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: currentColor;
+  font-weight: 600;
+  font-size: 25px;
+}
