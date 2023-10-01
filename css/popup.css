@@ -1,0 +1,46 @@
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.popup__hidden {
+  display: none;
+}
+
+.popup__img {
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.popup__close {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.popup__arrow {
+  position: absolute;
+  top: 50%;
+}
+
+.popup__arrow--left {
+  left: 10%;
+}
+
+.popup__arrow--right {
+  right: 10%;
+}

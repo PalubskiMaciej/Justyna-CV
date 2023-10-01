@@ -1,0 +1,29 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.galleryItem {
+  max-width: 100px;
+  max-height: 150px;
+  margin: 20px;
+  overflow: hidden;
+  transform: scale(1);
+  transition: 0.3s;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.galleryItem:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.galleryItem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
