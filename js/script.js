@@ -33,23 +33,30 @@ galleryItems.forEach((galleryItem, index) => {
   });
 });
 
-const galleryClose = () => {
+const closePopup = () => {
   popup.classList.add("popup__hidden");
 };
 
-popupClose.addEventListener("click", galleryClose);
+popupClose.addEventListener("click", closePopup);
 
 arrowRight.addEventListener("click", showNextImage);
 
 arrowLeft.addEventListener("click", showPreviousImage);
 
 document.addEventListener("keydown", (event) => {
-  console.log(event);
-  if (event.code === "ArrowRight" || event.keyCode === 39) {
-    showNextImage();
-  } else if (event.code === "ArrowLeft" || event.keyCode === 37) {
-    showPreviousImage();
-  } else if (event.code === "Escape" || event.keyCode === 27) {
-    galleryClose();
+  if (!popup.classList.contains("popup__hidden")) {
+    if (event.code === "ArrowRight" || event.keyCode === 39) {
+      showNextImage();
+    }
+
+    if (event.code === "ArrowLeft" || event.keyCode === 37) {
+      showPreviousImage();
+    }
+
+    if (event.code === "Escape" || event.keyCode === 27) {
+      galleryClose();
+    }
   }
 });
+
+popup.addEventListener("click", closePopup);
